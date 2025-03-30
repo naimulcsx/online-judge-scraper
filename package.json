@@ -24,10 +24,13 @@
   "type": "module",
   "license": "MIT",
   "scripts": {
-    "ci": "npm run build",
-    "build": "tsc"
+    "ci": "npm run build && npm run check-format",
+    "build": "tsc",
+    "format": "prettier --write .",
+    "check-format": "prettier --check ."
   },
   "devDependencies": {
+    "prettier": "^3.5.3",
     "typescript": "^5.8.2"
   }
 }
