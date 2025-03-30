@@ -1,0 +1,33 @@
+{
+  "name": "online-judge-scraper",
+  "version": "1.0.0",
+  "description": "A library to extract information easily from various online judges.",
+  "keywords": [
+    "online-judge",
+    "scraper",
+    "codeforces",
+    "codechef",
+    "programming"
+  ],
+  "homepage": "https://github.com/naimulcsx/online-judge-scraper",
+  "bugs": {
+    "url": "https://github.com/naimulcsx/online-judge-scraper/issues"
+  },
+  "author": "Naimul Haque <naimulcsx@gmail.com> (https://naimulhaque.com)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/naimulcsx/online-judge-scraper.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "ci": "npm run build",
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.2"
+  }
+}
