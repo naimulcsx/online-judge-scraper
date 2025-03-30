@@ -2,6 +2,7 @@
   "name": "online-judge-scraper",
   "version": "1.0.0",
   "description": "A library to extract information easily from various online judges.",
+  "main": "dist/index.js",
   "keywords": [
     "online-judge",
     "scraper",
@@ -27,9 +28,11 @@
     "ci": "npm run build && npm run check-format",
     "build": "tsc",
     "format": "prettier --write .",
-    "check-format": "prettier --check ."
+    "check-format": "prettier --check .",
+    "check-exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm"
   },
   "devDependencies": {
+    "@arethetypeswrong/cli": "^0.17.4",
     "prettier": "^3.5.3",
     "typescript": "^5.8.2"
   }
