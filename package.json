@@ -25,15 +25,18 @@
   "type": "module",
   "license": "MIT",
   "scripts": {
-    "ci": "npm run build && npm run check-format",
+    "ci": "npm run build && npm run check-format && npm run check-exports && npm run test",
     "build": "tsc",
     "format": "prettier --write .",
     "check-format": "prettier --check .",
-    "check-exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm"
+    "check-exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm",
+    "test": "vitest run",
+    "dev": "vitest"
   },
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.17.4",
     "prettier": "^3.5.3",
-    "typescript": "^5.8.2"
+    "typescript": "^5.8.2",
+    "vitest": "^3.0.9"
   }
 }
