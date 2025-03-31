@@ -35,8 +35,12 @@
   },
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.17.4",
+    "@types/node": "^22.13.14",
     "prettier": "^3.5.3",
     "typescript": "^5.8.2",
     "vitest": "^3.0.9"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0"
   }
 }
