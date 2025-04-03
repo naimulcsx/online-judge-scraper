@@ -1,6 +1,6 @@
 {
   "name": "online-judge-scraper",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A library to extract information easily from various online judges.",
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
