@@ -1,50 +1,16 @@
 {
-  "name": "online-judge-scraper",
-  "version": "0.1.0",
-  "description": "A library to extract information easily from various online judges.",
-  "main": "./dist/index.js",
-  "typings": "./dist/index.d.ts",
-  "keywords": [
-    "online-judge",
-    "scraper",
-    "codeforces",
-    "codechef",
-    "programming"
-  ],
-  "homepage": "https://github.com/naimulcsx/online-judge-scraper",
-  "bugs": {
-    "url": "https://github.com/naimulcsx/online-judge-scraper/issues"
-  },
-  "author": "Naimul Haque <naimulcsx@gmail.com> (https://naimulhaque.com)",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/naimulcsx/online-judge-scraper.git"
-  },
-  "files": [
-    "dist"
-  ],
-  "type": "module",
-  "license": "MIT",
+  "name": "@online-judge-scraper/source",
+  "private": true,
   "scripts": {
-    "ci": "npm run build && npm run check-format && npm run check-exports && npm run test",
-    "build": "tsc",
-    "format": "prettier --write .",
-    "check-format": "prettier --check .",
-    "check-exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm",
-    "test": "vitest run",
-    "dev": "vitest"
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "ci": "turbo ci"
   },
   "devDependencies": {
-    "@arethetypeswrong/cli": "^0.17.4",
-    "@types/node": "^22.13.14",
-    "prettier": "^3.5.3",
-    "typescript": "^5.8.2",
-    "vitest": "^3.0.9"
+    "turbo": "^2.4.4"
   },
-  "dependencies": {
-    "cheerio": "^1.0.0"
-  },
-  "publishConfig": {
-    "access": "public"
+  "packageManager": "pnpm@10.7.1",
+  "engines": {
+    "node": ">=20"
   }
 }
