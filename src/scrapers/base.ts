@@ -22,15 +22,6 @@ export abstract class Scraper<TURLParams extends Record<string, string> = {}> {
   abstract canHandle(url: string): boolean;
 
   /**
-   * Fetches the HTML content of the problem page.
-   *
-   * @param url - The URL of the problem to fetch
-   * @returns A Promise that resolves to the HTML content
-   * @throws Error if fetching fails
-   */
-  abstract fetchProblemPage(url: string): Promise<string>;
-
-  /**
    * Scrapes problem data from the given URL.
    *
    * @param url - The URL of the problem to scrape
@@ -46,5 +37,27 @@ export abstract class Scraper<TURLParams extends Record<string, string> = {}> {
    * @param url - The original problem URL
    * @returns The extracted Problem object
    */
-  abstract extractProblem(html: string): Problem;
+  abstract extractData(html: string): Problem;
+}
+
+/**
+ * Error class for scraper errors.
+ */
+export class ScraperError extends Error {
+  readonly judge: string;
+  readonly type: string;
+
+  static readonly ERROR_TYPES = {
+    INVALID_URL: 'Invalid URL',
+    VALIDATION_ERROR: 'Validation error',
+    PARSING_ERROR: 'Parsing error',
+    NETWORK_ERROR: 'Network error',
+  } as const;
+
+  constructor(judge: string, type: string, message: string) {
+    super(`[${judge}] ${type}: ${message}`);
+    this.name = `${judge}ScraperError`;
+    this.judge = judge;
+    this.type = type;
+  }
 }
