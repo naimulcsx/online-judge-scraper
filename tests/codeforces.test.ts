@@ -174,8 +174,6 @@ describe('CodeforcesScraper', () => {
 
       const $ = cheerio.load(problem.description);
 
-      console.log(problem.description);
-
       // Validate text content
       // Extract content, input, and output sections separately
       const contentText = normalizeText($('div').first().text());

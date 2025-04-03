@@ -24,5 +24,8 @@
 
     /* Prevent DOM Types */
     "lib": ["es2022"]
-  }
+  },
+
+  /* Include */
+  "include": ["src/**/*.ts"]
 }

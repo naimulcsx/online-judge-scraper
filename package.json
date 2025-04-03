@@ -1,8 +1,9 @@
 {
   "name": "online-judge-scraper",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "A library to extract information easily from various online judges.",
-  "main": "dist/src/index.js",
+  "main": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
   "keywords": [
     "online-judge",
     "scraper",
@@ -42,5 +43,8 @@
   },
   "dependencies": {
     "cheerio": "^1.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
